@@ -1,0 +1,17 @@
+spring:
+  application:
+    name : lxlearnzuul
+
+server:
+  port : 1111
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:5000/eureka/
+
+zuul:
+  routes:
+    sbService :
+      path : /**  #路径
+      serviceId : lxlearn

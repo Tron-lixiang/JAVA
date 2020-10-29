@@ -1,0 +1,31 @@
+server:
+  port: 9005
+spring:
+  application:
+    name: lxlearnspringbootConfig
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          # 仓库地址
+          uri: https://github.com/Tron-lixiang/Rinzler
+          # 对应 {label} 部分，即 Git 的分支
+          label: master
+          # 仓库文件夹名称，多个以逗号分隔
+          search-paths: Rinzler/application-dev.properties
+          # git 仓库用户名（公开库可以不用填写）
+          username:
+          # git 仓库密码（公开库可以不用填写）
+          password:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 30
