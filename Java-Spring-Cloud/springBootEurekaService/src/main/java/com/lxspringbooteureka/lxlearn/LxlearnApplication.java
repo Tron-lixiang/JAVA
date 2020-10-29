@@ -15,3 +15,17 @@ public class LxlearnApplication {
     }
 
 }
+
+
+//
+//     /Users/lixiang1008/Code/apache-maven-3.6.3
+//     /System/Volumes/Data/Users/lixiang1008/.jenkins/workspace/springBrother/Java-Spring-Cloud/springBootRibbon
+
+//打包后的位置
+//      /Users/lixiang1008/.jenkins/workspace/springBrother/Java-Spring-Cloud/springBootRibbon/target/lxlearn-1.0-SNAPSHOT.jar
+
+//    mvn clean package 打包后 eureka 的位置
+//java -jar /Users/lixiang1008/.jenkins/workspace/springBrother/Java-Spring-Cloud/springBootEurekaService/target/lxlearn-0.0.1-SNAPSHOT.jar
+
+//     jenkins
+//     java -jar jenkins.war --httpPort=9998
